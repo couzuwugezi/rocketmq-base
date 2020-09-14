@@ -23,10 +23,10 @@ public class SyncProducer {
 
         for (int i = 0; i < 10; i++) {
             Message message = new Message();
-            message.setTopic("topic1");
+            message.setTopic("base");
             message.setBody(("Hello World" + i).getBytes());
             message.setTags("tag1");
-            message.setKeys("key31");
+            message.setKeys("key");
 
             SendResult sendResult = defaultMQProducer.send(message);
             System.out.println("发送结果：" + sendResult);

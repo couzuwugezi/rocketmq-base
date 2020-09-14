@@ -22,10 +22,10 @@ public class AsyncProducer {
         defaultMQProducer.setRetryTimesWhenSendAsyncFailed(0);
         for (int i = 0; i < 10; i++) {
             Message message = new Message();
-            message.setTopic("topic2");
+            message.setTopic("base");
             message.setBody(("Hello World" + i).getBytes());
-            message.setTags("tag2");
-            message.setKeys("key2");
+            message.setTags("tag3");
+            message.setKeys("key");
 
             defaultMQProducer.send(message, new SendCallback() {
 

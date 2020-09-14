@@ -22,10 +22,10 @@ public class OneWayProducer {
 
         for (int i = 0; i < 10; i++) {
             Message message = new Message();
-            message.setTopic("topic3");
+            message.setTopic("base");
             message.setBody(("Hello World sendOneway" + i).getBytes());
-            message.setTags("tag3");
-            message.setKeys("key3");
+            message.setTags("tag2");
+            message.setKeys("key");
 
             defaultMQProducer.sendOneway(message);
 //            System.out.println("发送结果：" + sendResult);
